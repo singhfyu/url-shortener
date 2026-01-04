@@ -8,13 +8,18 @@ public class InMemoryUrlRepository implements UrlRepository{
         repository.put(shortCode,longUrl);
     }
 
-    @Override
+    /*@Override
     public boolean exists(String shortCode){
         return repository.containsKey(shortCode);
-    }
+    }*/
     @Override
     public String find(String shortCode){
         return repository.get(shortCode);
+    }
+
+    @Override
+    public void incrementClickCount(String shortCode) {
+        //no operation yet
     }
 
 
